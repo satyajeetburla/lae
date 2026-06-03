@@ -100,5 +100,10 @@ scripts/run_paper_gru_eval.sh \
   --max_num_episodes=1
 ```
 
+## Release Status
 
+This repository is an initial research release of the LAE experiment code.
+It includes the core code and configuration for the paper setup. Additional
+artifacts, documentation, and examples are planned for
+future updates.
 
