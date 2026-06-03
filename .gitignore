@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+
+# Generated logs and runs
+logs/
+outputs/
+wandb/
+train_dir/
+quad-swarm-rl/train_dir/
+quad-swarm-rl/logs/
+
+# Large local datasets, checkpoints, and videos
+Auxilary_Folder/
+Save_Data/
+trained_model_util/
+checkpoints/
+artifacts/local/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.mov
+*.avi
+*.zip

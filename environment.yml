@@ -1,0 +1,28 @@
+name: quadswarm-latent
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+      - -e ./quad-swarm-rl
+      - torch==1.13.1
+      - sample-factory==2.0.2
+      - numpy==1.23.5
+      - scipy==1.10.1
+      - numba==0.57.1
+      - gym==0.23.1
+      - pyglet==1.5.23
+      - transforms3d==0.4.2
+      - noise==1.2.2
+      - bezier==2020.5.19
+      - matplotlib==3.7.5
+      - plotly==5.13.0
+      - imageio==2.34.2
+      - imageio-ffmpeg==0.5.1
+      - h5py==3.11.0
+      - joblib==1.4.2
+      - pyyaml==6.0.2
+      - tqdm==4.66.5
+      - attrdict==2.0.1
+      - wandb==0.18.3

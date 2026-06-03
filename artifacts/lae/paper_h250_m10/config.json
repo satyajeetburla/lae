@@ -1,0 +1,21 @@
+{
+  "name": "paper_h250_m10_gru_lcwm",
+  "description": "ICRA LAE paper default: behavior classifier horizon H=250 and GRU LCWM prediction horizon m=10.",
+  "classifier": {
+    "path": "classifier_h250.pth",
+    "input_dim": 30,
+    "hidden_dims": [512, 512, 256, 128],
+    "num_classes": 2,
+    "horizon": 250
+  },
+  "editor": {
+    "type": "gru",
+    "path": "lcwm_gru_h250_m10.pt",
+    "latent_dim": 20,
+    "window": 3,
+    "hidden_dim": 256,
+    "num_layers": 4,
+    "dropout": 0.2,
+    "prediction_horizon": 10
+  }
+}

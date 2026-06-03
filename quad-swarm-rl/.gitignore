@@ -1,0 +1,15 @@
+gym_art/quadrotor/papers/
+*__pycache__*
+*.pyc
+*.swp
+.idea
+*.mp4
+_data
+_results_temp
+_results
+*.pkl
+*.ipynb
+*.wpr
+*.cprof
+*.egg-info/
+train_dir/
