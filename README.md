@@ -23,13 +23,16 @@ conda env create -f environment.yml
 conda activate quadswarm-latent
 ```
 
+## Evaluation
+
+The evaluation scripts support two initialization modes:
+
+* `dataset_seq` — deterministic evaluation using a fixed dataset of initial conditions.
+* `random` — evaluation using randomly generated initial conditions.
+  
 ## Required Local Files
 
-This repository tracks only code and configuration files. The policy
-checkpoints, GRU-LAE checkpoints, and evaluation datasets should be added
-locally.
-
-Expected files:
+The examples expect the following local files:
 
 ```text
 outputs/train_dir/<experiment>/config.json
@@ -41,23 +44,27 @@ path/to/lae_gru_checkpoint.pt
 path/to/initial_conditions.npy
 ```
 
+File descriptions:
+
+```text
+outputs/train_dir/<experiment>/config.json          RL policy configuration
+outputs/train_dir/<experiment>/checkpoint_p0/*.pth  trained RL policy checkpoint
+path/to/classifier_checkpoint.pth                   classifier checkpoint
+path/to/lae_gru_checkpoint.pt                       GRU-LAE checkpoint
+path/to/initial_conditions.npy                      initial-condition dataset
+```
+
 Set the paths used by the examples:
 
 ```bash
 export TRAIN_DIR=outputs/train_dir
 export EXPERIMENT=02_sim2real_obst_density_see_1111_q.o.den_0.2
-export DEVICE=gpu
+export DEVICE=cuda
 export DATASET=path/to/initial_conditions.npy
 ```
 
 
 
-## Evaluation
-
-The evaluation scripts support two initialization modes:
-
-* `dataset_seq` — deterministic evaluation using a fixed dataset of initial conditions.
-* `random` — evaluation using randomly generated initial conditions.
 
 ### Base RL Policy (Dataset Initialization)
 
